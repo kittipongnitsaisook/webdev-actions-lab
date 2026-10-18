@@ -1,20 +1,187 @@
 <!doctype html>
-<html lang="th">
+<html lang="th" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Lab</title>
+    <meta name="description" content="Kittipong Nitsaisook - Web Development Lab Portfolio with GitHub Actions and GitHub Pages CI/CD">
+    <title>Kittipong N. | Web Development Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="card">
-        <h1>My Web Development Lab</h1>
-        <p>ชื่อ: kittipong nitsaisook | รหัสนิสิต: 67160316</p>
-        <p id="status">Ready to deploy</p>
-        <button id="helloBtn">Say Hello</button>
-    </main>
+    <div class="page-wrapper">
+        <!-- Navigation / Header Bar -->
+        <header class="navbar">
+            <div class="brand">
+                <span class="brand-badge">CI/CD Lab</span>
+                <span class="brand-title">Kittipong.dev</span>
+            </div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="สลับโหมดมืด/สว่าง">
+                    <span class="theme-icon">🌙</span>
+                    <span class="theme-label">Dark Mode</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Hero Card -->
+        <main class="card hero-card">
+            <div class="avatar-ring">
+                <div class="avatar-inner">KN</div>
+            </div>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span id="deployStatus">GitHub Pages Online</span>
+            </div>
+            <h1 class="hero-title">Web Development & Automation Lab</h1>
+            <p class="student-info">
+                <strong>ชื่อ:</strong> Kittipong Nitsaisook &nbsp;|&nbsp; 
+                <strong>รหัสนิสิต:</strong> 67160316
+            </p>
+            <p class="welcome-text">
+                ยินดีต้อนรับสู่หน้าเว็บไซต์ Portfolio แลปทดสอบการ Deploy อัตโนมัติด้วย 
+                <span class="highlight">GitHub Actions</span> สู่ <span class="highlight">GitHub Pages</span> (CI/CD Pipeline)
+            </p>
+
+            <!-- Interactive Action Box -->
+            <div class="action-box">
+                <p id="status" class="status-message">Ready to deploy</p>
+                <div class="btn-group">
+                    <button id="helloBtn" class="primary-btn">
+                        <span>👋 Say Hello</span>
+                    </button>
+                    <button id="quoteBtn" class="secondary-btn">
+                        <span>✨ Inspiration</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Section 1: About Me -->
+        <section id="about" class="card section-card">
+            <div class="section-header">
+                <span class="section-tag">01. Overview</span>
+                <h2>👤 About Me</h2>
+            </div>
+            <div class="about-content">
+                <p>
+                    สวัสดีครับ! ผม <strong>Kittipong Nitsaisook</strong> นิสิตผู้มีความสนใจและหลงใหลในการพัฒนา Web Application 
+                    และการวางระบบ Automation / CI/CD เพื่อให้การส่งมอบซอฟต์แวร์เป็นไปอย่างรวดเร็วและมีประสิทธิภาพสูง
+                </p>
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <span class="item-icon">🎓</span>
+                        <div>
+                            <h4>การศึกษา</h4>
+                            <p>รหัสนิสิต 67160316</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="item-icon">🚀</span>
+                        <div>
+                            <h4>ความสนใจหลัก</h4>
+                            <p>Web Development & DevOps</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="item-icon">⚡</span>
+                        <div>
+                            <h4>เป้าหมาย</h4>
+                            <p>สร้างสรรค์เว็บที่มีประสิทธิภาพและ Modern UX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Skills -->
+        <section id="skills" class="card section-card">
+            <div class="section-header">
+                <span class="section-tag">02. Capabilities</span>
+                <h2>🛠️ Skills & Technologies</h2>
+            </div>
+            <p class="section-desc">ทักษะและเครื่องมือที่ใช้ในการพัฒนาและทดสอบในแลปนี้:</p>
+            <div class="skills-grid">
+                <div class="skill-chip">
+                    <span class="skill-icon">🌐</span>
+                    <span class="skill-name">HTML5 / Semantic</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">🎨</span>
+                    <span class="skill-name">CSS3 / Modern Layout</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">⚡</span>
+                    <span class="skill-name">JavaScript (ES6+)</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">🐙</span>
+                    <span class="skill-name">Git & GitHub</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">⚙️</span>
+                    <span class="skill-name">GitHub Actions (CI/CD)</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">🚀</span>
+                    <span class="skill-name">GitHub Pages Deployment</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">📱</span>
+                    <span class="skill-name">Responsive Design</span>
+                </div>
+                <div class="skill-chip">
+                    <span class="skill-icon">🔒</span>
+                    <span class="skill-name">Automation & Verification</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Contact -->
+        <section id="contact" class="card section-card">
+            <div class="section-header">
+                <span class="section-tag">03. Connect</span>
+                <h2>📫 Contact</h2>
+            </div>
+            <p class="section-desc">สามารถติดต่อหรือติดตามผลงานได้ผ่านช่องทางด้านล่างนี้:</p>
+            <div class="contact-links">
+                <a href="https://github.com/kittipongnitsaisook" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">🐙</div>
+                    <div class="contact-details">
+                        <span class="contact-title">GitHub Profile</span>
+                        <span class="contact-handle">@kittipongnitsaisook</span>
+                    </div>
+                    <span class="arrow-icon">↗</span>
+                </a>
+                <a href="https://github.com/kittipongnitsaisook/webdev-actions-lab" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">📦</div>
+                    <div class="contact-details">
+                        <span class="contact-title">Lab Repository</span>
+                        <span class="contact-handle">webdev-actions-lab</span>
+                    </div>
+                    <span class="arrow-icon">↗</span>
+                </a>
+                <div class="contact-card static-contact">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <span class="contact-title">Student Email</span>
+                        <span class="contact-handle">kittipong (Student ID: 67160316)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Kittipong Nitsaisook • Built with Modern HTML, CSS & Vanilla JS</p>
+            <p class="sub-footer">Deployed automatically via GitHub Actions to GitHub Pages</p>
+        </footer>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

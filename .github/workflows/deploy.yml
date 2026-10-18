@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v6
+      - name: Verify index.html exists (Challenge)
+        run: test -f index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload static website
